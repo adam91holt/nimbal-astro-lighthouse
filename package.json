@@ -1,0 +1,19 @@
+{
+  "name": "nimbal-astro-lighthouse",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview --host 127.0.0.1",
+    "lighthouse": "lighthouse http://127.0.0.1:4321/nimbal-astro-lighthouse/ --chrome-flags='--headless=new --no-sandbox' --output=json --output-path=./lighthouse-report.json --quiet"
+  },
+  "dependencies": {
+    "@astrojs/check": "latest",
+    "astro": "latest",
+    "lightningcss": "latest",
+    "typescript": "latest"
+  },
+  "devDependencies": {}
+}

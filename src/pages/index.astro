@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Nimbal',
+  url: 'https://nimbal.io/',
+  logo: 'https://nimbal.io/wp-content/uploads/2019/08/cropped-Screen-Shot-2019-08-29-at-11.00.06-AM.png',
+  sameAs: [
+    'https://www.linkedin.com/company/28748929/',
+    'https://www.facebook.com/nimbalnz',
+    'https://www.instagram.com/nimbalnz/',
+    'https://twitter.com/NimbalNz'
+  ]
+};
+---
+<BaseLayout>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} slot="head" />
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" aria-label="Site header">
+    <div class="container nav">
+      <a class="logo" href="#top" aria-label="Nimbal home">
+        <img src={`${base}/nimbal-logo.png`} alt="Nimbal" width="547" height="100" decoding="async" />
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#products">Products</a>
+        <a href="#why">Why Nimbal</a>
+        <a href="#process">Process</a>
+        <a href="#proof">Proof</a>
+        <a href="#contact" class="nav-cta">Book a demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">AI-assisted testing</div>
+          <h1 id="hero-title">Accelerate test automation without hiring an automation army.</h1>
+          <p class="lead">Nimbal combines plain-English automation, AI-assisted test generation, coverage visibility and managed services so product teams can ship with confidence from day one.</p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="btn btn-primary" href="#contact">Book a demo</a>
+            <a class="btn btn-secondary" href="#products">Explore products</a>
+          </div>
+          <div class="hero-note" aria-label="Key benefits">
+            <span><span class="check" aria-hidden="true">✓</span>Tests in minutes</span>
+            <span><span class="check" aria-hidden="true">✓</span>Coverage visibility</span>
+            <span><span class="check" aria-hidden="true">✓</span>Cloud or on-prem</span>
+          </div>
+        </div>
+        <aside class="product-card" aria-label="Nimbal automation workflow preview">
+          <div class="browser-frame">
+            <div class="browser-top" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="window">
+              <h2>Release confidence dashboard</h2>
+              <div class="flow">
+                <div class="flow-step"><div class="step-icon" aria-hidden="true">01</div><div><b>Describe the journey</b><small>Plain English test intent</small></div><span class="status">Ready</span></div>
+                <div class="flow-step"><div class="step-icon" aria-hidden="true">02</div><div><b>Generate automation</b><small>Reusable scripts and checks</small></div><span class="status">Built</span></div>
+                <div class="flow-step"><div class="step-icon" aria-hidden="true">03</div><div><b>Run across devices</b><small>Web, mobile and API coverage</small></div><span class="status">Live</span></div>
+                <div class="flow-step"><div class="step-icon" aria-hidden="true">04</div><div><b>Review evidence</b><small>Video playback and results</small></div><span class="status">Passed</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-caption">
+            <div class="metric"><strong>70+</strong><span>languages</span></div>
+            <div class="metric"><strong>4×</strong><span>faster starts</span></div>
+            <div class="metric"><strong>24/7</strong><span>scheduled runs</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section alt" id="products" aria-labelledby="products-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Products</div>
+            <h2 id="products-title">A complete stack for practical automation.</h2>
+          </div>
+          <p class="section-desc">Software, training and expert services for teams that need automation now — not after six months of framework building.</p>
+        </div>
+        <div class="cards">
+          <article class="service-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h10"/><path d="M4 17h7"/><path d="m17 14 2 2 4-5"/></svg>
+            <h3>Nimbal Auto</h3>
+            <p>Build automated tests in minutes using simple English, autocompleting actions and a library of reusable prebuilt scripts.</p>
+          </article>
+          <article class="service-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v18"/><path d="M5 8h14"/><path d="M5 16h14"/><circle cx="5" cy="8" r="2"/><circle cx="19" cy="8" r="2"/><circle cx="5" cy="16" r="2"/><circle cx="19" cy="16" r="2"/></svg>
+            <h3>Nimbal Tree</h3>
+            <p>Plan, schedule, run and review test cycles from one visibility layer, including video playback, results and live views.</p>
+          </article>
+          <article class="service-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
+            <h3>AI Testing Agents</h3>
+            <p>Use AI-assisted analysis and generation to expand coverage, reduce manual setup and keep regression suites moving.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why" aria-labelledby="why-title">
+      <div class="container split">
+        <div class="panel">
+          <div class="section-kicker">Why teams switch</div>
+          <h2 id="why-title">Testing should move at product speed.</h2>
+          <p>Traditional automation starts with a framework project. Nimbal starts with working tests, then gives your team the tooling and expert support to scale from there.</p>
+          <div class="check-list">
+            <div class="check-item"><span class="check" aria-hidden="true">✓</span><span>Reduce release risk with repeatable regression coverage.</span></div>
+            <div class="check-item"><span class="check" aria-hidden="true">✓</span><span>Use existing testers and product knowledge — not only specialist automation engineers.</span></div>
+            <div class="check-item"><span class="check" aria-hidden="true">✓</span><span>Pair platform licensing with training, migration and managed operation when needed.</span></div>
+          </div>
+        </div>
+        <div class="timeline" id="process" aria-label="Nimbal delivery process">
+          <article class="timeline-step"><div class="timeline-num">1</div><div><h3>Map the journeys that matter</h3><p>Turn business requirements and user journeys into focused test coverage.</p></div></article>
+          <article class="timeline-step"><div class="timeline-num">2</div><div><h3>Automate with reusable building blocks</h3><p>Combine prebuilt scripts, plain-English actions and integrations into maintainable flows.</p></div></article>
+          <article class="timeline-step"><div class="timeline-num">3</div><div><h3>Run, review and improve</h3><p>Schedule cycles, inspect evidence and keep coverage aligned as products change.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section proof" id="proof" aria-labelledby="proof-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Proof</div>
+            <h2 id="proof-title">Built for teams that cannot afford slow feedback.</h2>
+          </div>
+          <p class="section-desc">Nimbal supports web, API and mobile automation while keeping management, evidence and coverage visible to the whole delivery team.</p>
+        </div>
+        <div class="quote-grid">
+          <figure class="quote">
+            <p>“Do it in a quarter of the time, for a quarter of the cost.”</p>
+            <cite>Nimbal automation promise</cite>
+          </figure>
+          <div class="stack">
+            <div class="stack-card"><b>Training</b><span>Learn how to automate and manage testing in hours.</span></div>
+            <div class="stack-card"><b>Support</b><span>Expert help included with your monthly license or outsource arrangement.</span></div>
+            <div class="stack-card"><b>Migration</b><span>Move existing scripted or Cucumber tests into a managed Nimbal workflow.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact" aria-labelledby="contact-title">
+      <div class="container cta-box">
+        <div>
+          <h2 id="contact-title">Ready to make testing less painful?</h2>
+          <p>Book a conversation with the Nimbal team and map the fastest path from manual regression to release confidence.</p>
+        </div>
+        <a class="btn btn-dark" href="https://meetings.hubspot.com/yadwinder-sharma/nimbal-saas" rel="noopener">Book a demo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <strong class="footer-brand">NIMBAL</strong>
+      <span>Test Automation Made Easy · <a href="https://nimbal.io/">nimbal.io</a></span>
+    </div>
+  </footer>
+</BaseLayout>

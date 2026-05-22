@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adam91holt.github.io/nimbal-astro-lighthouse/sitemap-index.xml

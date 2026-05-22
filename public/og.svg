@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Nimbal — Test Automation Made Easy</title>
+  <desc id="desc">Navy and orange branded Nimbal social preview graphic</desc>
+  <rect width="1200" height="630" fill="#10243f"/>
+  <circle cx="1050" cy="70" r="280" fill="#ff7a1a" opacity="0.14"/>
+  <circle cx="160" cy="570" r="220" fill="#1d4b73" opacity="0.55"/>
+  <path d="M140 188h120v120H140zM303 188h120v120H303zM466 188h120v120H466z" fill="none" stroke="#ff7a1a" stroke-width="18" stroke-linejoin="round"/>
+  <path d="M200 308v82c0 34 26 61 61 61h90c35 0 62-27 62-61v-82" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+  <text x="660" y="255" fill="#ffffff" font-family="Arial, sans-serif" font-size="76" font-weight="800">Nimbal</text>
+  <text x="663" y="325" fill="#ff7a1a" font-family="Arial, sans-serif" font-size="38" font-weight="700">Test Automation Made Easy</text>
+  <text x="663" y="385" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="27">AI-assisted testing, coverage and delivery confidence.</text>
+</svg>

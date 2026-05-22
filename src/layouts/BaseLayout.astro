@@ -1,0 +1,32 @@
+---
+const {
+  title = 'Nimbal | Test Automation Made Easy',
+  description = 'Accelerate test automation with Nimbal Auto, Nimbal Tree and AI-assisted testing workflows built for teams that need production confidence.',
+  canonical = Astro.url.pathname,
+} = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const canonicalUrl = new URL(`${base}${canonical === '/' ? '/' : canonical}`, Astro.site).toString();
+const ogUrl = new URL(`${base}/og.svg`, Astro.site).toString();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/png" href={`${base}/favicon.png`} />
+    <meta name="theme-color" content="#10243f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <slot name="head" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
